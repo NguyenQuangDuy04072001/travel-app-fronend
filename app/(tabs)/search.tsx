@@ -1,0 +1,20 @@
+import { StyleSheet } from 'react-native';
+import { Text, View } from '@/components/Themed';
+
+const Search = () => {
+  return (
+    <View style={styles.container}>
+      <Text>Search</Text>
+    </View>
+  );
+}
+
+export default Search
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+});
