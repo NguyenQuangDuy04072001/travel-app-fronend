@@ -1,7 +1,11 @@
+import { Dimensions } from "react-native";
+
 export const StorageKey = {
     ACCESS_TOKEN: "ACCESS_TOKEN",
     UN_FIRST_OPEN: "UN_FIRST_OPEN",
 };
+
+export const { width, height } = Dimensions.get('window')
 
 
 export const dataCategoriesButton = [

@@ -89,31 +89,33 @@ const Page = () => {
         )
       }} />
       {/* <TouchableWithoutFeedback onPress={Keyboard.dismiss}> */}
-        <View style={[styles.container, { paddingTop: headerHeight }]}>
-          <ScrollView showsVerticalScrollIndicator={false}>
-            <Text style={styles.headingTxt}>Explore The Beautiful World!</Text>
-            <View style={styles.searchSectionWrapper}>
-              <View style={styles.searchBar}>
-                <Ionicons
-                  name='search'
-                  size={18}
-                  style={{ marginRight: 5 }}
-                  color={Colors.black}
-                />
-                <TextInput placeholder='Search...' style={{ flex: 1 }} />
-              </View>
-              <TouchableOpacity>
-                <Ionicons name='options' size={28} style={styles.filterBtn} color={Colors.white} />
-              </TouchableOpacity>
+      <View style={[styles.container, { paddingTop: headerHeight }]}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <Text style={styles.headingTxt}>Explore The Beautiful World!</Text>
+          <View style={styles.searchSectionWrapper}>
+            <View style={styles.searchBar}>
+              <Ionicons
+                name='search'
+                size={18}
+                style={{ marginRight: 5 }}
+                color={Colors.black}
+              />
+              <TextInput placeholder='Search...' style={{ flex: 1 }} />
             </View>
+            <TouchableOpacity>
+              <Ionicons name='options' size={28} style={styles.filterBtn} color={Colors.white} />
+            </TouchableOpacity>
+          </View>
 
-            <CategoryButtons onCategoryChanged={onCatChange} />
+          <CategoryButtons onCategoryChanged={onCatChange} />
 
+          <View style={{minHeight: 300, backgroundColor: 'transparent'}}>
             <Listings data={categoryList} category={category} />
+          </View>
 
-            <GroupListings data={groupList} />
-          </ScrollView>
-        </View>
+          <GroupListings data={groupList} />
+        </ScrollView>
+      </View>
       {/* </TouchableWithoutFeedback> */}
     </>
   );

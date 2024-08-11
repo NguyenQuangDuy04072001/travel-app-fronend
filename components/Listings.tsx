@@ -26,7 +26,7 @@ const Listings = ({ data, category }: Props) => {
             <Link href={`/category-detail/${item.id}`} asChild>
                 <TouchableOpacity>
                     <View style={styles.item}>
-                        <Image source={{ uri: "https://aleale.com.vn/wp-content/uploads/2016/08/anh-song-nui-thien-nhien.jpg" }} style={styles.image} />
+                        <Image source={{ uri: item.image }} style={styles.image} />
                         <View style={styles.bookmark}>
                             <Ionicons name="bookmark-outline" size={20} color={Colors.white} />
                         </View>
